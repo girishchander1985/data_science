@@ -1,2 +1,2 @@
 # data_science
- practive data science using nptel 
+ practice data science using nptel 
