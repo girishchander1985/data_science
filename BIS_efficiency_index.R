@@ -35,8 +35,17 @@ wim5 <-dbGetQuery(con,"select * from  dashboard.data_manak_eff_index where batch
 
 head(wim5, n = 10)
 
+as.matrix(wim5[,9:10])
+
+barplot (as.matrix(wim5[,10]),xlab = "Branch Name",ylab = "Efficiency index", names.arg=wim5$str_branch_name,col=c("blue","red") )
+
+
 barplot (wim5[,10],xlab = "Branch Name",
          ylab = "Efficiency index", names.arg=wim5$str_branch_name,col='blue') 
+
+barplot (wim5[,10],xlab = "Branch Name",
+         ylab = "Efficiency index", names.arg=wim5$str_branch_name,horiz=TRUE,col='blue') 
+
 
 
 
